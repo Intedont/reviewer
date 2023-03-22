@@ -53,4 +53,4 @@ def predict(model, tokenizer, text):
     output = model(input_ids, mask)
     print(output.item())
 
-    return(round(output.item()) + 1) # +1 потому что модель училась регрессировать значения от 0 до 9
+    return(round(output.item()))

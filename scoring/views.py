@@ -11,15 +11,20 @@ model.eval()
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
 def index(request):
-    answer = None
+    score = 0
+    status = ''
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
             review_text = form.cleaned_data.get('review')
             print(review_text)
-            answer = predict(model, tokenizer, review_text)
+            score = predict(model, tokenizer, review_text)
+            if(score >= 7):
+                status = 'положительный'
+            else:
+                status = 'отрицательный'
     else:
         form = ReviewForm()
 
-    context = {'form': form, 'answer': answer}
+    context = {'form': form, 'score': score, 'status': status}
     return render(request, 'index.html', context)

@@ -1,37 +1,18 @@
 body {
-    font: normal 15px 'Roboto', sans-serif;
+    font: normal 18px 'Roboto', sans-serif;
+    margin: 0;    
 }
 
-.head {
-    font-size: 36px;
-    text-decoration: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 50px;
-    text-align: left;
+
+h1 {
+    font-size: 30px;
 }
 
-.create {
-    padding-top: 10px;
-}
+header { 
+    padding: 1px;
+    padding-left: 20px;
+    background: lightblue;
+    font-size: 18px;
+   }
 
-a {
-    color: black;
-    text-decoration: none;
-}
 
-a:visited {
-    color: black;
-    text-decoration: none;
-}
-
-.menu {
-    list-style: none;
-    position: absolute;
-    padding-left: 50px;
-}
-
-.login label {
-    font: normal 15px 'Roboto', sans-serif;
-    display: block;
-}

@@ -3,16 +3,18 @@
 {% load static %}
 
 {% block content %}
-    <link rel="stylesheet" type="text/css" href="{% static 'blog/feed.css' %}">
-    <div class="content">
-        <h3>Введите рецензию</h3>
+    <link rel="stylesheet" type="text/css" href="{% static 'scoring/index.css' %}">
+    <div id="content">
         <form method="post">
             {% csrf_token %}
             <div class="review_form">
-            {{ form.as_p }}
-            <button type="submit" class="button">Отправить</button>
-            <p>{{ answer }}</p>
+                {{ form.as_p }}
+                <button type="submit" class="button">Отправить</button>
             </div>
         </form>
+        <div>
+            <p>Предполагаемый рейтинг: {{ score }}</p>
+            <p>Предполагаемый статус: {{ status }}</p>
+        </div>
     </div>
 {% endblock %}
