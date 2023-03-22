@@ -1,0 +1,37 @@
+body {
+    font: normal 15px 'Roboto', sans-serif;
+}
+
+.head {
+    font-size: 36px;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    text-align: left;
+}
+
+.create {
+    padding-top: 10px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.menu {
+    list-style: none;
+    position: absolute;
+    padding-left: 50px;
+}
+
+.login label {
+    font: normal 15px 'Roboto', sans-serif;
+    display: block;
+}

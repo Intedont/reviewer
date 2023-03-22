@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/feed.css' %}">
+    <div class="content">
+        <h3>Введите рецензию</h3>
+        <form method="post">
+            {% csrf_token %}
+            <div class="review_form">
+            {{ form.as_p }}
+            <button type="submit" class="button">Отправить</button>
+            <p>{{ answer }}</p>
+            </div>
+        </form>
+    </div>
+{% endblock %}
